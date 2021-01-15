@@ -9,7 +9,7 @@ let theLikes = document.querySelectorAll(".like");
 
 function likeCallBack(evt){
   let thisLike  = evt.target;
-  
+
      mimicServerCall().then((ok) => {
         thisLike.classList.add('activated-heart');
         thisLike.querySelector('span').innerText = FULL_HEART;
@@ -17,11 +17,11 @@ function likeCallBack(evt){
 
      }).catch( (error) => {
         let theModal =  document.querySelector('#modal');
-        theModal.classList.remove('hidden'); 
+        theModal.classList.remove('hidden');
         setTimeout( function(){
-          theModal.classList.add('hidden'); 
+          theModal.classList.add('hidden');
         },5000);
-        
+
      });
 
 }
